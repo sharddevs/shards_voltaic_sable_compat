@@ -1,0 +1,16 @@
+[19May2026 20:33:19.233] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientdev, --version, 21.1.230, --assetIndex, 17, --assetsDir, C:\\Users\\Trevor\\.gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.fmlVersion, 4.0.42, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.230, --fml.neoFormVersion, 20240808.144430]
+[19May2026 20:33:19.236] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Microsoft OpenJDK 64-Bit Server VM 21.0.11+10-LTS
+[19May2026 20:33:19.238] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.11 by Microsoft; OS Windows 11 arch amd64 version 10.0
+[19May2026 20:33:19.339] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[19May2026 20:33:19.522] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[19May2026 20:33:19.623] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[19May2026 20:33:19.768] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Trevor/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23138!/ Service=ModLauncher Env=CLIENT
+[19May2026 20:33:19.891] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon RX 7900 XTX GL version 4.6.0 Core Profile Context 26.5.2.260505, ATI Technologies Inc.
+[19May2026 20:33:19.990] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[19May2026 20:33:19.991] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Minecraft 1.21.1 (minecraft)
+		NeoForge 21.1.230 (neoforge)
+		Voltaic-Sable Compat 0.0NONE (voltaic_sable_compat)

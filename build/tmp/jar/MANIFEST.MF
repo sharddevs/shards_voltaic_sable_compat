@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: voltaic_sable_compat
+Specification-Vendor: trevorgolden
+Specification-Version: 1
+Implementation-Title: voltaic_sable_compat
+Implementation-Version: 0.1.0
+Implementation-Vendor: trevorgolden
+MixinConfigs: voltaic_sable_compat.mixins.json
+

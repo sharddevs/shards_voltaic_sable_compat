@@ -1,0 +1,106 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.78'
+}
+
+version = '0.1.0'
+group = 'com.trevorgolden'
+
+base {
+    archivesName = 'voltaic_sable_compat'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = '21.1.230'
+    
+    parchment {
+        mappingsVersion = '2024.11.17'
+        minecraftVersion = '1.21.1'
+    }
+    
+    runs {
+        client {
+            client()
+        }
+        server {
+            server()
+        }
+    }
+    
+    mods {
+        voltaic_sable_compat {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+repositories {
+    maven {
+        name = 'TrevorGoldenMaven'
+        url = 'https://maven.trevorgolden.com/releases'
+        credentials {
+            username = project.findProperty('mavenTrevorUsername') ?: ''
+            password = project.findProperty('mavenTrevorPassword') ?: ''
+        }
+    }
+    maven {
+        name = 'NeoForged'
+        url = 'https://maven.neoforged.net/releases'
+    }
+    mavenLocal()
+}
+
+dependencies {
+    // Upstream mods we mixin into / reference types from
+    compileOnly 'voltaic:Voltaic:1.21.1-1.0.2-0'
+    compileOnly 'ballistix:Ballistix:1.21.1-1.0.1-0'
+    compileOnly('dev.ryanhcode.sable:sable-neoforge-1.21.1:1.2.2') {
+    transitive = false
+
+}
+    compileOnly('dev.ryanhcode.sable:sable-neoforge-1.21.1:1.2.2') {
+        transitive = false
+    }
+    compileOnly files('libs/sable-companion-common-1.21.1-1.6.0.jar')
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+}
+
+jar {
+    manifest {
+        attributes([
+            'Specification-Title':      'voltaic_sable_compat',
+            'Specification-Vendor':     'trevorgolden',
+            'Specification-Version':    '1',
+            'Implementation-Title':     project.name,
+            'Implementation-Version':   project.version,
+            'Implementation-Vendor':    'trevorgolden',
+            'MixinConfigs':             'voltaic_sable_compat.mixins.json',
+        ])
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifactId = 'voltaic_sable_compat'
+        }
+    }
+    repositories {
+        maven {
+            name = 'TrevorGoldenMaven'
+            url = 'https://maven.trevorgolden.com/releases'
+            credentials {
+                username = project.findProperty('mavenTrevorUsername') ?: ''
+                password = project.findProperty('mavenTrevorPassword') ?: ''
+            }
+        }
+    }
+}
