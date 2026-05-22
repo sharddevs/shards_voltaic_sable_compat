@@ -14,8 +14,8 @@ import dev.ryanhcode.sable.Sable;
 import dev.ryanhcode.sable.sublevel.SubLevel;
 
 import ballistix.common.tile.silo.TileLauncherControlPanelT1;
-
-@Mixin(TileLauncherControlPanelT1.class)
+import ballistix.common.tile.TileVerticalLaunchSilo;
+@Mixin({ TileLauncherControlPanelT1.class, TileVerticalLaunchSilo.class })
 public abstract class ControlPanelRangeMixin {
 
     @Redirect(

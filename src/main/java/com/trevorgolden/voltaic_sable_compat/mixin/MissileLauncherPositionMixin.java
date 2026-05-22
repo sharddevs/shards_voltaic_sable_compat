@@ -14,8 +14,8 @@ import dev.ryanhcode.sable.Sable;
 import dev.ryanhcode.sable.sublevel.SubLevel;
 
 import ballistix.common.tile.silo.TileLauncherPlatformT1;
-
-@Mixin(TileLauncherPlatformT1.class)
+import ballistix.common.tile.TileVerticalLaunchSilo;
+@Mixin({ TileLauncherPlatformT1.class, TileVerticalLaunchSilo.class })
 public abstract class MissileLauncherPositionMixin {
 
     @ModifyArgs(
