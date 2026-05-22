@@ -18,18 +18,6 @@ import ballistix.common.tile.turret.antimissile.TileTurretLaser;
 import ballistix.common.tile.turret.antimissile.TileTurretRailgun;
 import ballistix.common.tile.turret.antimissile.TileTurretSAM;
 
-/**
- * Ballistix turrets compute getProjectileLaunchPosition() from getBlockPos().
- * On a Sable-assembled airship that BlockPos is the hidden sub-level coord
- * (~20M), so projectile spawn, fire-control distance checks and raycasts all
- * operate in sub-level space and the turret effectively can't fire usefully.
- *
- * We transform the returned launch position to real-world coordinates. Every
- * position-dependent turret behaviour routes through this one method, so
- * fixing the return value fixes spawn + targeting + raycast together.
- *
- * Identity transform when the turret is not in a sub-level (ground turret).
- */
 @Mixin({ TileTurretCIWS.class, TileTurretLaser.class,
         TileTurretRailgun.class, TileTurretSAM.class })
 public abstract class LauncherPositionTurretMixin {

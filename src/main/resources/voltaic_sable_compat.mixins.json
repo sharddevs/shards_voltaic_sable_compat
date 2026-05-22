@@ -6,9 +6,10 @@
     "client": [],
     "server": [],
     "mixins": [
-        "ShatterBlocksDiagnosticMixin",
         "SubnodeCascadeFixMixin",
         "SableMoveBlocksRefreshMixin",
-        "LauncherPositionTurretMixin"
+        "LauncherPositionTurretMixin",
+        "MissileLauncherPositionMixin",
+        "ControlPanelRangeMixin"
     ]
 }

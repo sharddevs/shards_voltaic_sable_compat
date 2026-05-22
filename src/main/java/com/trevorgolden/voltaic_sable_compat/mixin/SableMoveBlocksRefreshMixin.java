@@ -20,19 +20,6 @@ import voltaic.common.block.connect.AbstractRefreshingConnectBlock;
 import voltaic.prefab.tile.types.GenericRefreshingConnectTile;
 import voltaic.prefab.utilities.Scheduler;
 
-/**
- * Sable suppresses onPlace during moveBlocks, so Voltaic refreshing cables
- * (BlockWire / BlockFluidPipe / BlockGasPipe) never rebuild connection state
- * or re-register with their network after a sub-level move.
- *
- * We inject after the per-block setBlockState (ordinal 0 = placement at the
- * new position) and, deferred one tick, refresh the cable: onPlace rebuilds
- * connection state, updateNetwork re-registers with the energy network,
- * sendBlockUpdated pushes the visual to clients.
- *
- * Known limitation at this baseline: wires do not always render visually
- * connected after assembly. Energy was observed flowing.
- */
 @Mixin(targets = "dev.ryanhcode.sable.api.SubLevelAssemblyHelper")
 public abstract class SableMoveBlocksRefreshMixin {
 
@@ -70,8 +57,6 @@ public abstract class SableMoveBlocksRefreshMixin {
                 }
                 tile.updateNetwork(Direction.values());
                 targetLevel.sendBlockUpdated(targetPos, st, st, Block.UPDATE_CLIENTS);
-                VoltaicSableCompat.LOGGER.info(
-                        "[CABLE-REFRESH] Refreshed cable network at {} after Sable move", targetPos);
             } catch (Throwable e) {
                 VoltaicSableCompat.LOGGER.error(
                         "[CABLE-REFRESH] refresh failed at {}", targetPos, e);
