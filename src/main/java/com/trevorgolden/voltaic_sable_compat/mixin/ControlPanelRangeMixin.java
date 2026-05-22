@@ -33,7 +33,7 @@ public abstract class ControlPanelRangeMixin {
             if (sub != null) {
                 Vec3 local = new Vec3(fromPos.getX() + 0.5, fromPos.getY() + 0.5, fromPos.getZ() + 0.5);
                 BlockPos worldFrom = BlockPos.containing(sub.logicalPose().transformPosition(local));
-                VoltaicSableCompat.LOGGER.info(
+                VoltaicSableCompat.LOGGER.debug(
                         "[LAUNCH-POS] CP range: {} -> {} (sub-level)", fromPos, worldFrom);
                 fromPos = worldFrom;
             }
