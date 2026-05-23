@@ -1,6 +1,6 @@
-package com.trevorgolden.voltaic_sable_compat.mixin;
+package com.sharddevs.shards_voltaic_sable_compat.mixin;
 
-import com.trevorgolden.voltaic_sable_compat.VoltaicSableCompat;
+import com.sharddevs.shards_voltaic_sable_compat.VoltaicSableCompat;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.phys.Vec3;
@@ -23,7 +23,7 @@ import ballistix.common.tile.turret.antimissile.TileTurretSAM;
 public abstract class LauncherPositionTurretMixin {
 
     @Inject(method = "getProjectileLaunchPosition", at = @At("RETURN"), cancellable = true)
-    private void voltaic_sable_compat$toWorldLaunchPos(CallbackInfoReturnable<Vec3> cir) {
+    private void shards_voltaic_sable_compat$toWorldLaunchPos(CallbackInfoReturnable<Vec3> cir) {
         Vec3 local = cir.getReturnValue();
         if (local == null) {
             return;

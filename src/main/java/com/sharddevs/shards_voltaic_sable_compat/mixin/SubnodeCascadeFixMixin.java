@@ -1,6 +1,6 @@
-package com.trevorgolden.voltaic_sable_compat.mixin;
+package com.sharddevs.shards_voltaic_sable_compat.mixin;
 
-import com.trevorgolden.voltaic_sable_compat.VoltaicSableCompat;
+import com.sharddevs.shards_voltaic_sable_compat.VoltaicSableCompat;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -19,7 +19,7 @@ public abstract class SubnodeCascadeFixMixin {
         cancellable = true,
         remap = false
     )
-    private void voltaic_sable_compat$preventCascadeDuringMove(
+    private void shards_voltaic_sable_compat$preventCascadeDuringMove(
         BlockState state,
         Level level,
         BlockPos pos,

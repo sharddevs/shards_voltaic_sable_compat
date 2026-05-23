@@ -1,6 +1,6 @@
-package com.trevorgolden.voltaic_sable_compat.mixin;
+package com.sharddevs.shards_voltaic_sable_compat.mixin;
 
-import com.trevorgolden.voltaic_sable_compat.VoltaicSableCompat;
+import com.sharddevs.shards_voltaic_sable_compat.VoltaicSableCompat;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.phys.Vec3;
@@ -26,7 +26,7 @@ public abstract class MissileLauncherPositionMixin {
             ),
             remap = false
     )
-    private void voltaic_sable_compat$worldSpaceLaunch(Args args) {
+    private void shards_voltaic_sable_compat$worldSpaceLaunch(Args args) {
         try {
             BlockEntity self = (BlockEntity) (Object) this;
             SubLevel sub = Sable.HELPER.getContaining(self);

@@ -1,6 +1,6 @@
-package com.trevorgolden.voltaic_sable_compat.mixin;
+package com.sharddevs.shards_voltaic_sable_compat.mixin;
 
-import com.trevorgolden.voltaic_sable_compat.VoltaicSableCompat;
+import com.sharddevs.shards_voltaic_sable_compat.VoltaicSableCompat;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -57,7 +57,7 @@ public abstract class SableMoveBlocksRefreshMixin {
             ),
             remap = false
     )
-    private static void voltaic_sable_compat$refreshCableAfterMove(
+    private static void shards_voltaic_sable_compat$refreshCableAfterMove(
             ServerLevel level, dev.ryanhcode.sable.api.SubLevelAssemblyHelper.AssemblyTransform transform, Iterable<BlockPos> blocks, CallbackInfo ci,
             @Local(ordinal = 1) ServerLevel resultingLevel,
             @Local(ordinal = 2) BlockPos newPos,
@@ -98,7 +98,7 @@ public abstract class SableMoveBlocksRefreshMixin {
             ),
             remap = false
     )
-    private static void voltaic_sable_compat$resyncMachineAfterMove(
+    private static void shards_voltaic_sable_compat$resyncMachineAfterMove(
             ServerLevel level, dev.ryanhcode.sable.api.SubLevelAssemblyHelper.AssemblyTransform transform, Iterable<BlockPos> blocks, CallbackInfo ci,
             @Local(ordinal = 1) ServerLevel resultingLevel,
             @Local(ordinal = 2) BlockPos newPos,

@@ -5,10 +5,10 @@ plugins {
 }
 
 version = '1.1.0'
-group = 'com.trevorgolden'
+group = 'com.sharddevs'
 
 base {
-    archivesName = 'voltaic_sable_compat'
+    archivesName = 'shards_voltaic_sable_compat'
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
@@ -31,7 +31,7 @@ neoForge {
     }
     
     mods {
-        voltaic_sable_compat {
+        shards_voltaic_sable_compat {
             sourceSet sourceSets.main
         }
     }
@@ -75,13 +75,13 @@ tasks.withType(JavaCompile).configureEach {
 jar {
     manifest {
         attributes([
-            'Specification-Title':      'voltaic_sable_compat',
-            'Specification-Vendor':     'trevorgolden',
+            'Specification-Title':      'shards_voltaic_sable_compat',
+            'Specification-Vendor':     'sharddevs',
             'Specification-Version':    '1',
             'Implementation-Title':     project.name,
             'Implementation-Version':   project.version,
-            'Implementation-Vendor':    'trevorgolden',
-            'MixinConfigs':             'voltaic_sable_compat.mixins.json',
+            'Implementation-Vendor':    'sharddevs',
+            'MixinConfigs':             'shards_voltaic_sable_compat.mixins.json',
         ])
     }
 }
@@ -90,7 +90,7 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             from components.java
-            artifactId = 'voltaic_sable_compat'
+            artifactId = 'shards_voltaic_sable_compat'
         }
     }
     repositories {

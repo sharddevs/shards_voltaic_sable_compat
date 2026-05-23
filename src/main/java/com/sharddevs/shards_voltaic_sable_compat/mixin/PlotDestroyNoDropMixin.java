@@ -1,4 +1,4 @@
-package com.trevorgolden.voltaic_sable_compat.mixin;
+package com.sharddevs.shards_voltaic_sable_compat.mixin;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
@@ -23,7 +23,7 @@ public class PlotDestroyNoDropMixin {
                     target = "Lnet/minecraft/world/level/Level;destroyBlock(Lnet/minecraft/core/BlockPos;Z)Z"
             )
     )
-    private boolean voltaic_sable_compat$noDropOnPlotTeardown(Level level, BlockPos pos, boolean drop) {
+    private boolean shards_voltaic_sable_compat$noDropOnPlotTeardown(Level level, BlockPos pos, boolean drop) {
         return level.destroyBlock(pos, false);
     }
 }

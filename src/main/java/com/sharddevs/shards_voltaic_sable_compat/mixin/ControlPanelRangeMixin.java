@@ -1,6 +1,6 @@
-package com.trevorgolden.voltaic_sable_compat.mixin;
+package com.sharddevs.shards_voltaic_sable_compat.mixin;
 
-import com.trevorgolden.voltaic_sable_compat.VoltaicSableCompat;
+import com.sharddevs.shards_voltaic_sable_compat.VoltaicSableCompat;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -26,7 +26,7 @@ public abstract class ControlPanelRangeMixin {
             ),
             remap = false
     )
-    private double voltaic_sable_compat$worldSpaceDistance(BlockPos fromPos, BlockPos toPos) {
+    private double shards_voltaic_sable_compat$worldSpaceDistance(BlockPos fromPos, BlockPos toPos) {
         try {
             BlockEntity self = (BlockEntity) (Object) this;
             SubLevel sub = Sable.HELPER.getContaining(self);
