@@ -1,6 +1,7 @@
 {
     "required": true,
     "package": "com.sharddevs.shards_voltaic_sable_compat.mixin",
+    "plugin": "com.sharddevs.shards_voltaic_sable_compat.mixin.ShardsVscMixinPlugin",
     "compatibilityLevel": "JAVA_21",
     "minVersion": "0.8",
     "client": [],

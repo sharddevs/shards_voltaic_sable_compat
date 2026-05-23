@@ -15,12 +15,12 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 neoForge {
     version = '21.1.230'
-    
+
     parchment {
         mappingsVersion = '2024.11.17'
         minecraftVersion = '1.21.1'
     }
-    
+
     runs {
         client {
             client()
@@ -29,7 +29,7 @@ neoForge {
             server()
         }
     }
-    
+
     mods {
         shards_voltaic_sable_compat {
             sourceSet sourceSets.main
@@ -58,10 +58,6 @@ dependencies {
     compileOnly 'voltaic:Voltaic:1.21.1-1.0.2-0'
     compileOnly 'ballistix:Ballistix:1.21.1-1.0.1-0'
     compileOnly('dev.ryanhcode.sable:sable-neoforge-1.21.1:1.2.2') {
-    transitive = false
-
-}
-    compileOnly('dev.ryanhcode.sable:sable-neoforge-1.21.1:1.2.2') {
         transitive = false
     }
     compileOnly files('libs/sable-companion-common-1.21.1-1.6.0.jar')
@@ -75,13 +71,13 @@ tasks.withType(JavaCompile).configureEach {
 jar {
     manifest {
         attributes([
-            'Specification-Title':      'shards_voltaic_sable_compat',
-            'Specification-Vendor':     'sharddevs',
-            'Specification-Version':    '1',
-            'Implementation-Title':     project.name,
-            'Implementation-Version':   project.version,
-            'Implementation-Vendor':    'sharddevs',
-            'MixinConfigs':             'shards_voltaic_sable_compat.mixins.json',
+                'Specification-Title':      'shards_voltaic_sable_compat',
+                'Specification-Vendor':     'sharddevs',
+                'Specification-Version':    '1',
+                'Implementation-Title':     project.name,
+                'Implementation-Version':   project.version,
+                'Implementation-Vendor':    'sharddevs',
+                'MixinConfigs':             'shards_voltaic_sable_compat.mixins.json',
         ])
     }
 }
