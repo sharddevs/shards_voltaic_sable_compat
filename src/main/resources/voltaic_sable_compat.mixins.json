@@ -10,6 +10,7 @@
         "SableMoveBlocksRefreshMixin",
         "LauncherPositionTurretMixin",
         "MissileLauncherPositionMixin",
-        "ControlPanelRangeMixin"
+        "ControlPanelRangeMixin",
+        "PlotDestroyNoDropMixin"
     ]
 }
