@@ -8,23 +8,6 @@ import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 import java.util.List;
 import java.util.Set;
 
-/**
- * Mixin config plugin for shards_voltaic_sable_compat.
- *
- * <p>Ballistix is an OPTIONAL dependency. Three mixins target Ballistix
- * classes and must not be applied when Ballistix is absent — otherwise mixin
- * tries to transform classes that do not exist, which fails class transform
- * and can take the whole mod down (or spam the log).
- *
- * <p>{@link #shouldApplyMixin} returns {@code false} for the Ballistix-gated
- * mixins when Ballistix is not in the mod list, so mixin skips them entirely
- * and never touches the missing classes. The Sable-side mixins
- * (SubnodeCascadeFix, SableMoveBlocksRefresh, PlotDestroyNoDrop) always apply.
- *
- * <p>The check uses {@link LoadingModList} rather than {@code ModList}: mixin
- * config plugins run very early in startup, before {@code ModList} is
- * populated, whereas {@code LoadingModList} is available at that stage.
- */
 public class ShardsVscMixinPlugin implements IMixinConfigPlugin {
 
     /** Resolved once at plugin load — the mod list does not change afterwards. */
